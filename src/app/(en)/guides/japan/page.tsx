@@ -45,6 +45,12 @@ export default function JapanGuidePage() {
           professionals. Always confirm anything important with a qualified
           patent professional in Japan.
         </p>
+        <p className="mt-3">
+          <code className="rounded bg-amber-100 px-1.5 py-0.5 text-xs text-amber-900">
+            TODO: Expert review needed before relying on this page for
+            user-facing legal-adjacent guidance.
+          </code>
+        </p>
       </div>
 
       <div className="mt-12 space-y-12">
@@ -57,6 +63,17 @@ export default function JapanGuidePage() {
             (JPO). A well-prepared consultation lets the professional spend
             time on guidance instead of basic information gathering.
           </p>
+          <p>This guide is written for:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>first-time inventors preparing for an initial consultation</li>
+            <li>software developers and AI/SaaS builders</li>
+            <li>startup founders</li>
+            <li>researchers</li>
+            <li>
+              anyone still deciding whether to speak with a patent professional
+              at all
+            </li>
+          </ul>
           <p>
             It covers preparation only: what to organize, what to bring, and
             what to ask. It does not tell you whether to file, what to file,

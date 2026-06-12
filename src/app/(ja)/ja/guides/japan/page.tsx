@@ -42,6 +42,12 @@ export default function JapanGuidePageJa() {
         <p className="text-sm font-medium text-amber-900">
           本ガイドは公開情報に基づく一般的な情報であり、法的助言ではありません。また、専門家によるレビューを予定している段階です。重要な事項は、必ず弁理士などの資格を有する専門家にご確認ください。
         </p>
+        <p className="mt-3">
+          <code className="rounded bg-amber-100 px-1.5 py-0.5 text-xs text-amber-900">
+            TODO: Expert review needed before relying on this page for
+            user-facing legal-adjacent guidance.
+          </code>
+        </p>
       </div>
 
       <div className="mt-12 space-y-12">
@@ -51,6 +57,14 @@ export default function JapanGuidePageJa() {
             <strong>弁理士</strong>
             (特許庁に対する手続の代理資格を持つ専門家)などへの初回相談を準備するためのものです。準備が整っていれば、限られた相談時間を「状況の説明」ではなく「専門家からの助言」に使うことができます。
           </p>
+          <p>本ガイドは、次のような方を想定しています。</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>初めての特許相談を準備している発明者</li>
+            <li>ソフトウェア開発者・AI/SaaS開発者</li>
+            <li>スタートアップ創業者</li>
+            <li>研究者</li>
+            <li>そもそも専門家に相談すべきかどうか迷っている方</li>
+          </ul>
           <p>
             扱うのは「準備」だけです。出願すべきか、何をどう出願するかは、専門家とともに判断する事項であり、本ガイドの範囲外です。
           </p>

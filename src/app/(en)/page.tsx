@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ProblemSection />
       <WhatItDoesSection />
       <WhatItDoesNotDoSection />
       <HowItWorksSection />
@@ -46,15 +47,64 @@ function HeroSection() {
           </Link>
         </div>
         <p className="mt-8 text-sm text-slate-500">
-          Not legal advice. No patentability opinions. No filing services. We
-          help you prepare — a qualified patent professional advises.
+          Not legal advice. Not a law firm. No patentability opinions or filing
+          services. We help you prepare — a qualified patent professional
+          advises.
         </p>
       </div>
     </section>
   );
 }
 
-/* 2. What this service does */
+/* 2. Problem statement */
+function ProblemSection() {
+  const problems = [
+    {
+      title: "Not sure what to say first",
+      description:
+        "In a first patent consultation, it is hard to know which parts of your invention to explain, and in what order. Without preparation, the meeting can end before the real questions begin.",
+    },
+    {
+      title: "Ideas scattered everywhere",
+      description:
+        "Notebooks, sketches, chat logs, half-finished documents — when information is scattered, a professional needs extra time just to see the whole picture.",
+    },
+    {
+      title: "Unsure what professionals will ask",
+      description:
+        "Public disclosure, similar products, how the idea was developed — simply knowing the questions patent professionals typically ask changes the quality of the conversation.",
+    },
+  ];
+
+  return (
+    <section className="py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading
+          eyebrow="The problem"
+          title="Unprepared consultations are expensive"
+          description="Time with a patent professional is valuable. Invention Brief AI works on the step that comes before the consultation: getting organized."
+        />
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {problems.map((problem) => (
+            <div
+              key={problem.title}
+              className="rounded-xl border border-slate-200 bg-white p-6"
+            >
+              <h3 className="text-lg font-semibold text-slate-900">
+                {problem.title}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {problem.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* 3. What this service does */
 function WhatItDoesSection() {
   const items = [
     {
@@ -80,7 +130,10 @@ function WhatItDoesSection() {
   ];
 
   return (
-    <section id="what-it-does" className="scroll-mt-16 py-20 sm:py-24">
+    <section
+      id="what-it-does"
+      className="scroll-mt-16 bg-slate-50 py-20 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="What this service does"
@@ -107,7 +160,7 @@ function WhatItDoesSection() {
   );
 }
 
-/* 3. What this service does not do */
+/* 4. What this service does not do */
 function WhatItDoesNotDoSection() {
   const items = [
     {
@@ -133,7 +186,7 @@ function WhatItDoesNotDoSection() {
   ];
 
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
+    <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="What this service does not do"
@@ -168,7 +221,7 @@ function WhatItDoesNotDoSection() {
   );
 }
 
-/* 4. How it works */
+/* 5. How it works */
 function HowItWorksSection() {
   const steps = [
     {
@@ -198,7 +251,10 @@ function HowItWorksSection() {
   ];
 
   return (
-    <section id="how-it-works" className="scroll-mt-16 py-20 sm:py-24">
+    <section
+      id="how-it-works"
+      className="scroll-mt-16 bg-slate-50 py-20 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="How it works"
@@ -225,7 +281,7 @@ function HowItWorksSection() {
   );
 }
 
-/* 5. Who it is for */
+/* 6. Who it is for */
 function WhoItIsForSection() {
   const audiences = [
     {
@@ -251,7 +307,7 @@ function WhoItIsForSection() {
   ];
 
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
+    <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Who it is for"
@@ -278,10 +334,10 @@ function WhoItIsForSection() {
   );
 }
 
-/* 6. Country guide preview */
+/* 7. Country guide preview */
 function CountryGuideSection() {
   return (
-    <section className="py-20 sm:py-24">
+    <section className="bg-slate-50 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Country guides"
@@ -341,7 +397,7 @@ function CountryGuideSection() {
   );
 }
 
-/* 7. Invention brief preview */
+/* 8. Invention brief preview */
 function BriefPreviewSection() {
   const briefSections = [
     {
@@ -367,7 +423,7 @@ function BriefPreviewSection() {
   ];
 
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
+    <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Invention brief preview"
@@ -413,10 +469,13 @@ function BriefPreviewSection() {
   );
 }
 
-/* 8. Waitlist call-to-action */
+/* 9. Waitlist call-to-action */
 function WaitlistSection() {
   return (
-    <section id="waitlist" className="scroll-mt-16 py-20 sm:py-24">
+    <section
+      id="waitlist"
+      className="scroll-mt-16 bg-slate-50 py-20 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-blue-900 px-6 py-16 text-center sm:px-16">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

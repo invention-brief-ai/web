@@ -11,6 +11,10 @@
       marked as `TODO` placeholders on `/guides/japan` and `/ja/guides/japan`)
 - [ ] Review all legal wording with qualified professionals
       (disclaimer pages, footer text, Japan guide, "does not do" sections)
+- [ ] Resolve the on-page expert-review placeholders once review is done
+      (`TODO: Expert review needed before relying on this page for
+      user-facing legal-adjacent guidance.` — shown in the notice banner on
+      `/guides/japan` and `/ja/guides/japan`)
 - [ ] English/Japanese content review by native speakers for tone and accuracy
 - [ ] Expand country guides (United States, Europe — currently "coming soon")
 
