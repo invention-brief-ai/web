@@ -51,6 +51,48 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-slate-900">
+            Standing Principles for Future Versions
+          </h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            When data features are added, the updated policy will follow these
+            standing principles, which distinguish three kinds of information:
+          </p>
+          <ul className="mt-3 list-disc space-y-3 pl-6 leading-7 text-slate-600">
+            <li>
+              <strong className="text-slate-900">
+                Confidential invention content
+              </strong>{" "}
+              (technical mechanisms, unpublished ideas, detailed
+              implementations, diagrams) will by default never be used for
+              ads, sponsored targeting, AI model training, professional
+              matching, analytics, resale, or lead generation. Any exception
+              would require your explicit, separate, informed consent.
+            </li>
+            <li>
+              <strong className="text-slate-900">
+                Non-confidential, user-selected metadata
+              </strong>{" "}
+              (such as a country of interest, preferred language, or a broad
+              technology category you choose yourself) may support navigation
+              or, in the future, clearly labeled professional-discovery
+              features — only where disclosed and consented to.
+            </li>
+            <li>
+              <strong className="text-slate-900">
+                Aggregated, anonymized usage statistics
+              </strong>{" "}
+              (such as how many users are interested in a given country) may
+              inform internal planning, only where properly anonymized.
+            </li>
+          </ul>
+          <p className="mt-3 leading-7 text-slate-600">
+            The default assumption, now and later: your invention content is
+            private and under your control.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900">
             When This Will Change
           </h2>
           <p className="mt-3 leading-7 text-slate-600">

@@ -11,6 +11,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ProblemSection />
+      <ThinkingPartnerSection />
       <WhatItDoesSection />
       <WhatItDoesNotDoSection />
       <HowItWorksSection />
@@ -28,7 +29,7 @@ function HeroSection() {
     <section className="bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
         <p className="mx-auto mb-6 inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-800">
-          Consultation preparation for inventors
+          A privacy-first, guided invention-thinking workspace
         </p>
         <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
           Walk into your patent consultation prepared.
@@ -110,7 +111,96 @@ function ProblemSection() {
   );
 }
 
-/* 3. What this service does */
+/* 3. AI as a structured thinking partner */
+function ThinkingPartnerSection() {
+  const plannedModes = [
+    {
+      name: "Mirror Mode",
+      description:
+        "Clarify your idea through guided reflection: the problem, the mechanism, possible alternatives, existing approaches, and the points you are still unsure about.",
+    },
+    {
+      name: "Brief Mode",
+      description:
+        "Turn that clarity into a structured consultation brief: summary, technical components, possible differentiators, disclosure history, and questions to ask.",
+    },
+    {
+      name: "Private Workspace",
+      description:
+        "Draft under your own control, export to Markdown or PDF, and share nothing unless you explicitly choose to share it.",
+    },
+  ];
+
+  return (
+    <section className="border-y border-blue-100 bg-blue-50 py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading
+          eyebrow="Think first, then draft"
+          title="Use AI as a structured thinking partner"
+          description="Before drafting anything, Invention Brief AI helps you reflect on your idea: the problem it solves, the mechanism behind it, possible alternatives, existing approaches, and the questions you may want to ask a qualified patent professional."
+        />
+        <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-slate-600">
+          General AI tools can help you write. Invention Brief AI focuses on
+          the specific preparation workflow before a patent consultation:
+          clarifying the problem, solution, mechanism, disclosure history, and
+          questions to ask a qualified professional.
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {plannedModes.map((mode) => (
+            <div
+              key={mode.name}
+              className="rounded-xl border border-blue-100 bg-white p-6"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {mode.name}
+                </h3>
+                <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+                  Planned
+                </span>
+              </div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {mode.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl rounded-xl border border-blue-100 bg-white p-6">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
+            Privacy comes first
+          </h3>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+            <li>
+              Your invention content stays private and under your control —
+              that is the design principle behind everything we build.
+            </li>
+            <li>
+              Confidential invention content will never be used for ads,
+              matching, analytics, or model training without your explicit,
+              separate consent.
+            </li>
+            <li>
+              Today&apos;s prototype collects nothing at all — see the{" "}
+              <Link
+                href="/privacy"
+                className="font-medium text-blue-700 hover:text-blue-800"
+              >
+                privacy page
+              </Link>{" "}
+              for the current status.
+            </li>
+          </ul>
+        </div>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-slate-500">
+          The goal is preparation and clarification — not legal advice,
+          patentability judgment, claim drafting, or patent filing.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* 4. What this service does */
 function WhatItDoesSection() {
   const items = [
     {
@@ -166,7 +256,7 @@ function WhatItDoesSection() {
   );
 }
 
-/* 4. What this service does not do */
+/* 5. What this service does not do */
 function WhatItDoesNotDoSection() {
   const items = [
     {
@@ -227,7 +317,7 @@ function WhatItDoesNotDoSection() {
   );
 }
 
-/* 5. How it works */
+/* 6. How it works */
 function HowItWorksSection() {
   const steps = [
     {
@@ -295,7 +385,7 @@ function HowItWorksSection() {
   );
 }
 
-/* 6. Who it is for */
+/* 7. Who it is for */
 function WhoItIsForSection() {
   const audiences = [
     {
@@ -348,7 +438,7 @@ function WhoItIsForSection() {
   );
 }
 
-/* 7. Country guide preview */
+/* 8. Country guide preview */
 function CountryGuideSection() {
   return (
     <section className="bg-slate-50 py-20 sm:py-24">
@@ -411,7 +501,7 @@ function CountryGuideSection() {
   );
 }
 
-/* 8. Invention brief preview */
+/* 9. Invention brief preview */
 function BriefPreviewSection() {
   const briefSections = [
     {
@@ -491,7 +581,7 @@ function BriefPreviewSection() {
   );
 }
 
-/* 9. Waitlist call-to-action */
+/* 10. Waitlist call-to-action */
 function WaitlistSection() {
   return (
     <section

@@ -1,8 +1,16 @@
 # Invention Brief AI
 
-A static prototype landing site for **Invention Brief AI** — a
-consultation-preparation tool that helps inventors organize their ideas
-before speaking with a qualified patent professional.
+A static prototype landing site for **Invention Brief AI** — a privacy-first,
+guided invention-thinking workspace that helps inventors clarify, structure,
+and prepare their ideas before speaking with a qualified patent professional.
+
+## Privacy-First Direction
+
+User invention content is private and user-controlled by default. Confidential
+invention content is never to be used for ads, matching, analytics, or model
+training without explicit, separate consent — see the standing principles on
+`/privacy`. The current prototype collects nothing at all (no forms, no
+analytics, no storage).
 
 ## Legal-Safe Positioning
 

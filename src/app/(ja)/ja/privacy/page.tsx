@@ -42,6 +42,38 @@ export default function PrivacyPageJa() {
 
         <section>
           <h2 className="text-xl font-semibold text-slate-900">
+            今後のバージョンで守る原則
+          </h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            将来データに関する機能を追加する際、更新後のポリシーは次の原則に従います。情報は3つの種類に明確に区別します。
+          </p>
+          <ul className="mt-3 list-disc space-y-3 pl-6 leading-7 text-slate-600">
+            <li>
+              <strong className="text-slate-900">
+                機密性のある発明内容
+              </strong>
+              (技術的な仕組み、未公開のアイデア、詳細な実装、図面など)は、広告、スポンサーターゲティング、AIモデルの学習、専門家マッチング、アクセス解析、第三者への提供、リード獲得のために、初期設定では一切使用しません。例外には、明示的で個別の、十分な説明に基づく同意が必要です。
+            </li>
+            <li>
+              <strong className="text-slate-900">
+                ユーザー自身が選択する非機密のメタデータ
+              </strong>
+              (関心のある国、希望する言語、自分で選ぶ大まかな技術分野など)は、内容の開示と同意がある場合に限り、サイト内のナビゲーションや、将来的には「スポンサー」と明確に表示された専門家検索機能などに利用される可能性があります。
+            </li>
+            <li>
+              <strong className="text-slate-900">
+                匿名化された統計情報
+              </strong>
+              (例:特定の国に関心を持つ利用者の数)は、適切に匿名化されている場合に限り、内部の計画立案に利用されることがあります。
+            </li>
+          </ul>
+          <p className="mt-3 leading-7 text-slate-600">
+            現在も将来も、基本となる前提は変わりません:発明に関する内容はプライベートであり、ユーザー自身の管理下にあります。
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900">
             今後の変更について
           </h2>
           <p className="mt-3 leading-7 text-slate-600">

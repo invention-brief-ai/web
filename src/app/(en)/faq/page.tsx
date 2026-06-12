@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "What is Invention Brief AI?",
     answer:
-      "A consultation-preparation tool. It helps inventors organize their ideas into a structured invention brief before speaking with a qualified patent professional, so the first consultation is focused and productive. It is currently a static prototype — the brief builder is not live yet.",
+      "A privacy-first, guided invention-thinking workspace. It helps inventors clarify and structure their ideas — the problem, the mechanism, what already exists, what to ask — before speaking with a qualified patent professional, so the first consultation is focused and productive. It is currently a static prototype — the brief builder is not live yet.",
   },
   {
     question: "Is this legal advice?",

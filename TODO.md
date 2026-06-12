@@ -31,6 +31,29 @@
       `src/lib/site.ts`; update `siteUrl` there when the domain changes)
 - [ ] Create OG/social-card images once visual identity (logo) exists
 
+## Privacy & Trust Architecture
+
+(From the privacy-and-mirror-mode strategy update, 2026-06.)
+
+- [ ] Design Local Draft Mode: browser/local-only editing, no server storage,
+      no account required, export-only workflow
+- [ ] Design the user-controlled export flow (Markdown/PDF; nothing shared
+      unless the user explicitly chooses to share)
+- [ ] Draft the privacy architecture separating (1) confidential invention
+      content, (2) non-confidential user-selected metadata, and
+      (3) aggregated anonymized statistics — see the "standing principles"
+      now published on `/privacy` and `/ja/privacy`
+- [x] Add homepage copy explaining AI as a structured thinking partner
+      (EN) / 壁打ち相手 (JA), with planned modes clearly labeled
+- [ ] Define future professional-side sponsored discovery using only
+      non-confidential, user-selected criteria — never confidential invention
+      content; clearly label all sponsored placements; check Japan-specific
+      rules on referral arrangements with qualified professionals
+- [ ] If AI Assist is added later: off by default for confidential content,
+      with a clear warning before anything is sent to an AI provider
+- [ ] Prepare an expert/legal review checklist before any real user data
+      collection begins
+
 ## Out of Scope Until Explicitly Planned
 
 - Backend, database, payment, login, analytics, invention intake

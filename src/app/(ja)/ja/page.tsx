@@ -11,6 +11,7 @@ export default function HomeJa() {
     <>
       <HeroSection />
       <ProblemSection />
+      <ThinkingPartnerSection />
       <WhatItDoesSection />
       <WhatItDoesNotDoSection />
       <HowItWorksSection />
@@ -28,7 +29,7 @@ function HeroSection() {
     <section className="bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
         <p className="mx-auto mb-6 inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-800">
-          発明者のための相談準備ツール
+          プライバシー第一の発明整理ワークスペース
         </p>
         <h1 className="mx-auto max-w-3xl text-3xl font-bold leading-snug tracking-tight text-slate-900 sm:text-5xl sm:leading-snug">
           弁理士に相談する前に、
@@ -109,7 +110,90 @@ function ProblemSection() {
   );
 }
 
-/* 3. このサービスでできること */
+/* 3. AIを壁打ち相手に */
+function ThinkingPartnerSection() {
+  const plannedModes = [
+    {
+      name: "ミラーモード",
+      description:
+        "ガイド付きの問いかけを通じて、課題、仕組み、考えられる代替案、既存の手法、まだ確信が持てない点を言語化します。",
+    },
+    {
+      name: "ブリーフモード",
+      description:
+        "整理した内容を、概要、技術要素、差別化になり得る点、公開の経緯、専門家への質問からなる相談ブリーフにまとめます。",
+    },
+    {
+      name: "プライベートワークスペース",
+      description:
+        "自分の管理下で下書きし、MarkdownやPDFに書き出せます。自分で選んだとき以外、何も共有されません。",
+    },
+  ];
+
+  return (
+    <section className="border-y border-blue-100 bg-blue-50 py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading
+          eyebrow="書く前に、考える"
+          title="AIを「壁打ち相手」として使い、発明アイデアを整理する"
+          description="いきなり出願書類を書くのではなく、まずは「何が課題なのか」「どのように解決しているのか」「既存の方法と何が違うのか」「専門家に何を確認すべきか」を整理します。"
+        />
+        <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-slate-600">
+          一般的なAIツールは文章作成に役立ちます。Invention Brief
+          AIは、特許相談前に必要となる「課題」「解決手段」「仕組み」「公開状況」「専門家に確認すべき質問」を整理する流れに特化します。
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {plannedModes.map((mode) => (
+            <div
+              key={mode.name}
+              className="rounded-xl border border-blue-100 bg-white p-6"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {mode.name}
+                </h3>
+                <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+                  構想中
+                </span>
+              </div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {mode.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl rounded-xl border border-blue-100 bg-white p-6">
+          <h3 className="text-sm font-semibold tracking-wide text-slate-900">
+            プライバシーが最優先
+          </h3>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+            <li>
+              発明に関する内容はユーザー自身の管理下に置く — これが、今後のすべての設計の前提です。
+            </li>
+            <li>
+              機密性のある発明内容を、明示的で個別の同意なく、広告、マッチング、アクセス解析、AIモデルの学習に使うことはありません。
+            </li>
+            <li>
+              現在のプロトタイプは、そもそも何も収集しません。現状の詳細は
+              <Link
+                href="/ja/privacy"
+                className="font-medium text-blue-700 hover:text-blue-800"
+              >
+                プライバシーページ
+              </Link>
+              をご覧ください。
+            </li>
+          </ul>
+        </div>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-slate-500">
+          法的助言、特許性判断、請求項作成、出願書類作成、特許出願手続の代理を提供するものではありません。
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* 4. このサービスでできること */
 function WhatItDoesSection() {
   const items = [
     {
@@ -167,7 +251,7 @@ function WhatItDoesSection() {
   );
 }
 
-/* 4. このサービスでできないこと */
+/* 5. このサービスでできないこと */
 function WhatItDoesNotDoSection() {
   const items = [
     {
@@ -231,7 +315,7 @@ function WhatItDoesNotDoSection() {
   );
 }
 
-/* 5. 利用の流れ */
+/* 6. 利用の流れ */
 function HowItWorksSection() {
   const steps = [
     {
@@ -296,7 +380,7 @@ function HowItWorksSection() {
   );
 }
 
-/* 6. 想定ユーザー */
+/* 7. 想定ユーザー */
 function WhoItIsForSection() {
   const audiences = [
     {
@@ -349,7 +433,7 @@ function WhoItIsForSection() {
   );
 }
 
-/* 7. 発明相談ブリーフの例 */
+/* 8. 発明相談ブリーフの例 */
 function BriefPreviewSection() {
   const briefSections = [
     {
@@ -427,7 +511,7 @@ function BriefPreviewSection() {
   );
 }
 
-/* 8. 国別ガイドのプレビュー */
+/* 9. 国別ガイドのプレビュー */
 function CountryGuideSection() {
   return (
     <section className="py-20 sm:py-24">
@@ -487,7 +571,7 @@ function CountryGuideSection() {
   );
 }
 
-/* 9. β版案内 */
+/* 10. β版案内 */
 function WaitlistSection() {
   return (
     <section id="waitlist" className="scroll-mt-16 bg-slate-50 py-20 sm:py-24">
