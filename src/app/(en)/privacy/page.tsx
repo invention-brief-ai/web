@@ -18,7 +18,9 @@ export default function PrivacyPage() {
       <div className="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-6">
         <p className="text-sm font-medium text-amber-900">
           This page is a placeholder. A full privacy policy will be published
-          before any data collection begins.
+          before any collection of personal or invention-related data begins.
+          The only collection today is the cookieless, aggregated visit
+          statistics described below.
         </p>
       </div>
 
@@ -30,9 +32,41 @@ export default function PrivacyPage() {
           <p className="mt-3 leading-7 text-slate-600">
             This prototype does not currently provide real account
             registration, payment, database storage, or invention intake. The
-            site is a set of static pages: there are no analytics, no tracking
-            scripts, and no working forms. The waitlist form shown on the home
-            page is a visual preview and does not submit or store anything.
+            site is a set of static pages with no working forms: nothing you
+            type anywhere on this site is transmitted or saved. The waitlist
+            form shown on the home page is a visual preview and does not
+            submit or store anything. The only data collected is the
+            aggregated, cookieless visit statistics described in the next
+            section.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900">
+            Aggregated Visit Statistics (Vercel Web Analytics)
+          </h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            This site uses Vercel Web Analytics, a cookieless measurement
+            tool provided by Vercel (our hosting provider), to count page
+            views in aggregate — for example, how many visitors read a given
+            guide. We use these numbers only to decide what content to improve
+            and write next.
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-6 leading-7 text-slate-600">
+            <li>No cookies are used, and there is no cross-site tracking.</li>
+            <li>
+              Visitors are not individually identified to us; Vercel processes
+              visits using an anonymized, short-lived identifier.
+            </li>
+            <li>
+              No invention content is involved — the site has no working
+              forms, so there is nothing you type to collect.
+            </li>
+          </ul>
+          <p className="mt-3 leading-7 text-slate-600">
+            This is the &quot;aggregated, anonymized usage statistics&quot;
+            layer described in the standing principles below — the only data
+            layer in use today.
           </p>
         </section>
 

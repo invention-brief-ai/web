@@ -47,7 +47,10 @@ export default function AboutPage() {
             Current Status
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 leading-7 text-slate-600">
-            <li>Static prototype — no accounts, payments, or data collection</li>
+            <li>
+              Static prototype — no accounts, payments, or content collection;
+              the only data is anonymous, cookieless visit statistics
+            </li>
             <li>The brief builder and waitlist are not live yet</li>
             <li>
               Guides are general information pending review by qualified

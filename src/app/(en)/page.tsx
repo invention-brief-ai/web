@@ -180,7 +180,8 @@ function ThinkingPartnerSection() {
               separate consent.
             </li>
             <li>
-              Today&apos;s prototype collects nothing at all — see the{" "}
+              Today&apos;s prototype collects no content you type — only
+              anonymous, cookieless visit counts. See the{" "}
               <Link
                 href="/privacy"
                 className="font-medium text-blue-700 hover:text-blue-800"

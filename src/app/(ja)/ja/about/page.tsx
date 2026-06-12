@@ -38,7 +38,7 @@ export default function AboutPageJa() {
           <h2 className="text-xl font-semibold text-slate-900">現在の状況</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 leading-7 text-slate-600">
             <li>
-              静的なプロトタイプです(アカウント、決済、データ収集はありません)
+              静的なプロトタイプです(アカウント、決済、入力内容の収集はありません。データはCookie不使用の匿名訪問統計のみ)
             </li>
             <li>ブリーフ作成機能とβ版案内の登録は、まだ稼働していません</li>
             <li>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteUrl } from "@/lib/site";
@@ -45,6 +46,7 @@ export default function EnglishLayout({
         <SiteHeader locale="en" />
         <main className="flex-1">{children}</main>
         <SiteFooter locale="en" />
+        <Analytics />
       </body>
     </html>
   );

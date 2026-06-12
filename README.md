@@ -9,8 +9,9 @@ and prepare their ideas before speaking with a qualified patent professional.
 User invention content is private and user-controlled by default. Confidential
 invention content is never to be used for ads, matching, analytics, or model
 training without explicit, separate consent — see the standing principles on
-`/privacy`. The current prototype collects nothing at all (no forms, no
-analytics, no storage).
+`/privacy`. The current prototype collects no content users type (no forms, no
+storage). The only measurement is Vercel Web Analytics: cookieless, aggregated
+page-view statistics, disclosed on `/privacy` and `/ja/privacy`.
 
 ## Legal-Safe Positioning
 
@@ -78,7 +79,8 @@ brief builder (`/demo` — canned example only, collects no input).
 - Payment
 - Real waitlist storage (the waitlist form is a non-functional preview)
 - Real invention intake
-- Analytics or tracking scripts
+- Behavioral/cookie-based tracking (the only measurement is cookieless,
+  aggregated Vercel Web Analytics, disclosed on the privacy pages)
 - Environment variables / `.env` files
 - Attorney database or professional referrals
 

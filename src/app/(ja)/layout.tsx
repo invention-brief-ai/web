@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteUrl } from "@/lib/site";
@@ -51,6 +52,7 @@ export default function JapaneseLayout({
         <SiteHeader locale="ja" />
         <main className="flex-1">{children}</main>
         <SiteFooter locale="ja" />
+        <Analytics />
       </body>
     </html>
   );

@@ -174,7 +174,7 @@ function ThinkingPartnerSection() {
               機密性のある発明内容を、明示的で個別の同意なく、広告、マッチング、アクセス解析、AIモデルの学習に使うことはありません。
             </li>
             <li>
-              現在のプロトタイプは、そもそも何も収集しません。現状の詳細は
+              現在のプロトタイプが収集するのは、Cookie不使用の匿名の訪問統計のみで、入力内容は一切収集しません。現状の詳細は
               <Link
                 href="/ja/privacy"
                 className="font-medium text-blue-700 hover:text-blue-800"

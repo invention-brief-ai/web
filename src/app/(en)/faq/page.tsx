@@ -28,12 +28,12 @@ const faqs = [
   {
     question: "How is this different from asking a general AI chatbot?",
     answer:
-      "Three ways. First, structure: the output is a brief in the format patent professionals actually want to see, with country-specific preparation guidance. Second, boundaries: the tool is built to stay clearly on the preparation side of the line and never drift into legal advice or patentability claims. Third, handling of your information: this prototype collects and stores nothing, and the planned brief builder is being designed so your idea is processed on your own device rather than sent to a server.",
+      "Three ways. First, structure: the output is a brief in the format patent professionals actually want to see, with country-specific preparation guidance. Second, boundaries: the tool is built to stay clearly on the preparation side of the line and never drift into legal advice or patentability claims. Third, handling of your information: this prototype collects no content you type — the only data is cookieless, aggregated visit statistics — and the planned brief builder is being designed so your idea is processed on your own device rather than sent to a server.",
   },
   {
     question: "Is my idea safe on this site?",
     answer:
-      "The current prototype has no forms that send or store data — nothing you type anywhere on this site is transmitted or saved. Even so, you should not enter confidential invention details into this or any service until appropriate privacy and confidentiality terms are in place. Keep unpublished details for the qualified professional you choose to work with.",
+      "The current prototype has no forms that send or store data — nothing you type anywhere on this site is transmitted or saved. The only data collected is anonymous, aggregated page-view statistics (cookieless, no individual tracking — see the privacy page). Even so, you should not enter confidential invention details into this or any service until appropriate privacy and confidentiality terms are in place. Keep unpublished details for the qualified professional you choose to work with.",
   },
   {
     question: "How much does it cost?",
