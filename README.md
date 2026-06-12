@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Invention Brief AI
 
-## Getting Started
+A static prototype landing site for **Invention Brief AI** — a
+consultation-preparation tool that helps inventors organize their ideas
+before speaking with a qualified patent professional.
 
-First, run the development server:
+## Legal-Safe Positioning
+
+This project deliberately positions itself as **preparation, not legal
+services**. The site does not — and must not — say or imply that it:
+
+- provides legal advice
+- determines patentability or offers patentability opinions
+- drafts patent claims or official patent application documents
+- files patents or represents users before any patent office
+- replaces patent attorneys, patent agents, or other qualified professionals
+
+All copy (English and Japanese) should preserve this framing. See `/disclaimer`
+and `/ja/disclaimer` for the canonical wording.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router, Turbopack)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+
+> **Note**: Read the bundled docs in `node_modules/next/dist/docs/` before
+> changing framework-facing code — this Next.js version may differ from what
+> you expect (see `AGENTS.md`).
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # local development at http://localhost:3000
+npm run build  # production build (all routes prerender as static)
+npx eslint src/  # lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Current Scope (v0.2)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Static pages only, in English and Japanese:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| English | Japanese |
+| --- | --- |
+| `/` | `/ja` |
+| `/disclaimer` | `/ja/disclaimer` |
+| `/privacy` | `/ja/privacy` |
+| `/guides/japan` | `/ja/guides/japan` |
 
-## Learn More
+English routes live in `src/app/(en)/`, Japanese routes in `src/app/(ja)/ja/`
+— two root layouts so each tree gets the correct `lang` attribute and fonts.
 
-To learn more about Next.js, take a look at the following resources:
+## Not Implemented Yet (Intentionally)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Backend, database, or API routes
+- Login / accounts
+- Payment
+- Real waitlist storage (the waitlist form is a non-functional preview)
+- Real invention intake
+- Analytics or tracking scripts
+- Environment variables / `.env` files
+- Attorney database or professional referrals
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `TODO.md` for the forward-looking list.

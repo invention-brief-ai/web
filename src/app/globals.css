@@ -21,3 +21,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Japanese pages: Latin glyphs from Geist, JP glyphs from Noto Sans JP */
+.font-ja {
+  font-family: var(--font-geist-sans), var(--font-noto-sans-jp),
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}

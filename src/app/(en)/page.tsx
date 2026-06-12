@@ -27,9 +27,9 @@ function HeroSection() {
           Walk into your patent consultation prepared.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-          Invention Brief AI helps you organize your idea into a clear,
-          structured invention brief — so your first meeting with a qualified
-          patent professional is focused, efficient, and productive.
+          Invention Brief AI helps inventors organize their ideas before
+          speaking with a qualified patent professional — so your first
+          consultation is focused, efficient, and productive.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
@@ -46,8 +46,8 @@ function HeroSection() {
           </Link>
         </div>
         <p className="mt-8 text-sm text-slate-500">
-          Not legal advice. Not a law firm. We help you prepare — your patent
-          professional advises.
+          Not legal advice. No patentability opinions. No filing services. We
+          help you prepare — a qualified patent professional advises.
         </p>
       </div>
     </section>
@@ -116,19 +116,19 @@ function WhatItDoesNotDoSection() {
         "Nothing in this service is legal advice, and using it does not create an attorney–client relationship.",
     },
     {
-      title: "We do not draft patent applications",
+      title: "We do not draft claims or applications",
       description:
-        "An invention brief is a preparation document for your consultation — it is not a patent application or claims draft.",
+        "An invention brief is a preparation document for your consultation — it is not a patent claim, application, or any official filing document.",
     },
     {
       title: "We do not determine patentability",
       description:
-        "Whether your invention can be patented is a legal judgment that only a qualified patent professional can help you assess.",
+        "Whether your invention can be patented is a legal judgment. We do not offer patentability opinions of any kind.",
     },
     {
-      title: "We do not file patents",
+      title: "We do not file patents for you",
       description:
-        "You cannot file a patent through this service. Filing is handled by you and the patent professional you choose to work with.",
+        "We do not represent users before any patent office. Filing is handled by you and the patent professional you choose to work with.",
     },
   ];
 
@@ -138,7 +138,7 @@ function WhatItDoesNotDoSection() {
         <SectionHeading
           eyebrow="What this service does not do"
           title="Clear boundaries, by design"
-          description="Patent decisions deserve qualified professional judgment. We stay firmly on the preparation side of that line."
+          description="Invention Brief AI complements — it never replaces — patent attorneys, patent agents, and other qualified professionals. We stay firmly on the preparation side of that line."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {items.map((item) => (
