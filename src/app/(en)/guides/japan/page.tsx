@@ -274,7 +274,17 @@ export default function JapanGuidePage() {
         </GuideSection>
       </div>
 
-      <div className="mt-16 rounded-xl border border-slate-200 bg-slate-50 p-6">
+      <p className="mt-12 text-sm leading-6 text-slate-600">
+        Related guide:{" "}
+        <Link
+          href="/guides/japan-self-filing"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          Considering filing a patent yourself in Japan? →
+        </Link>
+      </p>
+
+      <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6">
         <h2 className="font-semibold text-slate-900">
           Prepare your own invention brief
         </h2>

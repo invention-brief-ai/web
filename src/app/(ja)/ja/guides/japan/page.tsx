@@ -220,7 +220,17 @@ export default function JapanGuidePageJa() {
         </GuideSection>
       </div>
 
-      <div className="mt-16 rounded-xl border border-slate-200 bg-slate-50 p-6">
+      <p className="mt-12 text-sm leading-6 text-slate-600">
+        関連ガイド:{" "}
+        <Link
+          href="/ja/guides/japan-self-filing"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          本人出願を考えている方へ →
+        </Link>
+      </p>
+
+      <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6">
         <h2 className="font-semibold text-slate-900">
           自分の発明相談ブリーフを準備する
         </h2>

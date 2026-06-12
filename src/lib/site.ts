@@ -12,6 +12,7 @@ export const sitePaths = [
   "/disclaimer",
   "/faq",
   "/guides/japan",
+  "/guides/japan-self-filing",
   "/privacy",
 ] as const;
 

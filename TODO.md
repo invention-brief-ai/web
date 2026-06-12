@@ -17,6 +17,13 @@
       `/guides/japan` and `/ja/guides/japan`)
 - [ ] English/Japanese content review by native speakers for tone and accuracy
 - [ ] Expand country guides (United States, Europe — currently "coming soon")
+- [x] Draft the Japan self-filing (本人出願) decision-and-preparation guide
+      (`/guides/japan-self-filing`, `/ja/guides/japan-self-filing`) — neutral
+      education only, no drafting instructions; needs the same expert review
+      and official citations as the main Japan guide
+- [ ] Future bridge content: "bringing a self-filed application to a
+      professional mid-course" (office-action stage) — highest-intent
+      moment, unique content; requires careful expert review
 
 ## Product (Later Versions)
 
