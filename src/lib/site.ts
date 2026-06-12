@@ -13,6 +13,7 @@ export const sitePaths = [
   "/faq",
   "/guides/japan",
   "/guides/japan-self-filing",
+  "/guides/software-ai",
   "/privacy",
 ] as const;
 

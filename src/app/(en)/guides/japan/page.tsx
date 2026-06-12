@@ -275,12 +275,19 @@ export default function JapanGuidePage() {
       </div>
 
       <p className="mt-12 text-sm leading-6 text-slate-600">
-        Related guide:{" "}
+        Related guides:{" "}
         <Link
           href="/guides/japan-self-filing"
           className="font-medium text-blue-700 hover:text-blue-800"
         >
-          Considering filing a patent yourself in Japan? →
+          Considering filing a patent yourself in Japan?
+        </Link>{" "}
+        ·{" "}
+        <Link
+          href="/guides/software-ai"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          Software &amp; AI invention preparation
         </Link>
       </p>
 

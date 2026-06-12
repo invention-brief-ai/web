@@ -17,6 +17,10 @@
       `/guides/japan` and `/ja/guides/japan`)
 - [ ] English/Japanese content review by native speakers for tone and accuracy
 - [ ] Expand country guides (United States, Europe — currently "coming soon")
+- [x] Draft the software/AI invention consultation-preparation guide
+      (`/guides/software-ai`, `/ja/guides/software-ai`) — says nothing about
+      patentability or eligibility; needs the same expert review and official
+      citations (JPO/USPTO/EPO) as the other guides
 - [x] Draft the Japan self-filing (本人出願) decision-and-preparation guide
       (`/guides/japan-self-filing`, `/ja/guides/japan-self-filing`) — neutral
       education only, no drafting instructions; needs the same expert review

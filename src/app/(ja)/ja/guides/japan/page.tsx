@@ -226,7 +226,14 @@ export default function JapanGuidePageJa() {
           href="/ja/guides/japan-self-filing"
           className="font-medium text-blue-700 hover:text-blue-800"
         >
-          本人出願を考えている方へ →
+          本人出願を考えている方へ
+        </Link>{" "}
+        ·{" "}
+        <Link
+          href="/ja/guides/software-ai"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          ソフトウェア・AI発明の相談準備
         </Link>
       </p>
 
