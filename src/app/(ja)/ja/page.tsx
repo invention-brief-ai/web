@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { alternatesFor } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: alternatesFor("/", "ja"),
+};
 
 export default function HomeJa() {
   return (
@@ -277,6 +283,14 @@ function HowItWorksSection() {
             </li>
           ))}
         </ol>
+        <p className="mt-10 text-center text-sm">
+          <Link
+            href="/ja/checklist"
+            className="font-medium text-blue-700 hover:text-blue-800"
+          >
+            紙で準備したい方へ:初回相談チェックリストを印刷する →
+          </Link>
+        </p>
       </div>
     </section>
   );
@@ -399,6 +413,14 @@ function BriefPreviewSection() {
               これは説明用のサンプルであり、法的な文書ではありません。ブリーフは、弁理士などの専門家と相談を始めるための「たたき台」です。
             </p>
           </div>
+          <p className="mt-6 text-center text-sm">
+            <Link
+              href="/ja/demo"
+              className="font-medium text-blue-700 hover:text-blue-800"
+            >
+              ブリーフができるまでの流れをデモで見る →
+            </Link>
+          </p>
         </div>
       </div>
     </section>

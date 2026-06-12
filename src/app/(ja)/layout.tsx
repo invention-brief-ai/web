@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { siteUrl } from "@/lib/site";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -21,12 +22,18 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Invention Brief AI — 弁理士に相談する前の発明アイデア整理ツール",
     template: "%s | Invention Brief AI",
   },
   description:
     "Invention Brief AIは、発明者が弁理士などの専門家に相談する前に、自分のアイデアを整理するための相談準備ツールです。法的助言を提供するものではありません。",
+  openGraph: {
+    siteName: "Invention Brief AI",
+    type: "website",
+    locale: "ja_JP",
+  },
 };
 
 export default function JapaneseLayout({

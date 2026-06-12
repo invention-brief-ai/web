@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
   description:
     "Invention Brief AI is a consultation-preparation tool, not a law firm. Read the full disclaimer.",
+  alternates: alternatesFor("/disclaimer", "en"),
 };
 
 export default function DisclaimerPage() {

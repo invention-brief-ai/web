@@ -10,6 +10,10 @@ const content = {
       { href: "/disclaimer", label: "Disclaimer" },
       { href: "/privacy", label: "Privacy Policy" },
       { href: "/guides/japan", label: "Japan Guide" },
+      { href: "/checklist", label: "Checklist" },
+      { href: "/demo", label: "Demo" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/about", label: "About" },
       { href: "/ja", label: "日本語", lang: "ja" },
     ],
     disclaimerHref: "/disclaimer",
@@ -23,6 +27,10 @@ const content = {
       { href: "/ja/disclaimer", label: "免責事項" },
       { href: "/ja/privacy", label: "プライバシーポリシー" },
       { href: "/ja/guides/japan", label: "日本向けガイド" },
+      { href: "/ja/checklist", label: "チェックリスト" },
+      { href: "/ja/demo", label: "デモ" },
+      { href: "/ja/faq", label: "よくある質問" },
+      { href: "/ja/about", label: "運営者情報" },
       { href: "/", label: "English", lang: "en" },
     ],
     disclaimerHref: "/ja/disclaimer",
@@ -33,7 +41,7 @@ export function SiteFooter({ locale }: { locale: "en" | "ja" }) {
   const t = content[locale];
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-slate-200 bg-slate-50 print:hidden">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="rounded-xl border border-slate-200 bg-white p-6">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-900">

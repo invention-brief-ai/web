@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { siteUrl } from "@/lib/site";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -15,12 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Invention Brief AI — Prepare for Your Patent Consultation",
     template: "%s | Invention Brief AI",
   },
   description:
     "Organize your invention into a clear, structured brief before you speak with a qualified patent professional. Consultation preparation — not legal advice.",
+  openGraph: {
+    siteName: "Invention Brief AI",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function EnglishLayout({

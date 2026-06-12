@@ -38,19 +38,30 @@ npm run build  # production build (all routes prerender as static)
 npx eslint src/  # lint
 ```
 
-## Current Scope (v0.2)
+## Current Scope (v0.3)
 
 Static pages only, in English and Japanese:
 
 | English | Japanese |
 | --- | --- |
 | `/` | `/ja` |
+| `/about` | `/ja/about` |
+| `/checklist` | `/ja/checklist` |
+| `/demo` | `/ja/demo` |
 | `/disclaimer` | `/ja/disclaimer` |
-| `/privacy` | `/ja/privacy` |
+| `/faq` | `/ja/faq` |
 | `/guides/japan` | `/ja/guides/japan` |
+| `/privacy` | `/ja/privacy` |
 
 English routes live in `src/app/(en)/`, Japanese routes in `src/app/(ja)/ja/`
 — two root layouts so each tree gets the correct `lang` attribute and fonts.
+
+Also included: `sitemap.xml` and `robots.txt` (generated from
+`src/app/sitemap.ts` / `robots.ts`), hreflang alternates on every page
+(configured via `src/lib/site.ts` — update `siteUrl` there when a custom
+domain is connected), printable checklist pages, downloadable brief
+worksheets under `public/downloads/`, and a read-only demo of the planned
+brief builder (`/demo` — canned example only, collects no input).
 
 ## Not Implemented Yet (Intentionally)
 

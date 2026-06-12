@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { alternatesFor } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: alternatesFor("/", "en"),
+};
 
 export default function Home() {
   return (
@@ -276,6 +282,14 @@ function HowItWorksSection() {
             </li>
           ))}
         </ol>
+        <p className="mt-10 text-center text-sm">
+          <Link
+            href="/checklist"
+            className="font-medium text-blue-700 hover:text-blue-800"
+          >
+            Prefer paper? Print the first-consultation checklist →
+          </Link>
+        </p>
       </div>
     </section>
   );
@@ -463,6 +477,14 @@ function BriefPreviewSection() {
               professional.
             </p>
           </div>
+          <p className="mt-6 text-center text-sm">
+            <Link
+              href="/demo"
+              className="font-medium text-blue-700 hover:text-blue-800"
+            >
+              Walk through how a brief is built →
+            </Link>
+          </p>
         </div>
       </div>
     </section>

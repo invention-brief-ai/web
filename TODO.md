@@ -20,10 +20,16 @@
 
 ## Product (Later Versions)
 
-- [ ] Add a non-sensitive waitlist (email only; publish privacy policy first)
+- [ ] Add a non-sensitive waitlist (email only; founder selects the hosted
+      form provider; publish privacy policy first)
 - [ ] Design the invention brief questionnaire
-      (guided questions → structured brief; keep clear of claim drafting)
-- [ ] Decide hreflang/alternate metadata strategy for EN/JA SEO
+      (guided questions → structured brief; keep clear of claim drafting;
+      candidate architecture: client-side only, no data leaves the browser —
+      founder decision pending; see `/demo` for the planned flow)
+- [x] Decide hreflang/alternate metadata strategy for EN/JA SEO
+      (implemented: per-page alternates + localized sitemap via
+      `src/lib/site.ts`; update `siteUrl` there when the domain changes)
+- [ ] Create OG/social-card images once visual identity (logo) exists
 
 ## Out of Scope Until Explicitly Planned
 

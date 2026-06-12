@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { alternatesFor } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "初めて特許相談をする人のための日本向け準備ガイド",
   description:
     "初めて弁理士などの専門家に相談する発明者のための準備ガイド。公開情報に基づく一般情報であり、法的助言ではありません。",
+  alternates: alternatesFor("/guides/japan", "ja"),
 };
 
 function GuideSection({

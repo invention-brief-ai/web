@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
   description: "Invention Brief AIプロトタイプのプライバシーポリシー。",
+  alternates: alternatesFor("/privacy", "ja"),
 };
 
 export default function PrivacyPageJa() {
