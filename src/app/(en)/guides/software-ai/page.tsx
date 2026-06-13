@@ -338,6 +338,13 @@ export default function SoftwareAiGuidePage() {
       <p className="mt-12 text-sm leading-6 text-slate-600">
         Related guides:{" "}
         <Link
+          href="/guides/researchers"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          Research invention preparation
+        </Link>{" "}
+        ·{" "}
+        <Link
           href="/guides/japan"
           className="font-medium text-blue-700 hover:text-blue-800"
         >

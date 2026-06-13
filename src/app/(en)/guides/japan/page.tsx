@@ -288,6 +288,13 @@ export default function JapanGuidePage() {
           className="font-medium text-blue-700 hover:text-blue-800"
         >
           Software &amp; AI invention preparation
+        </Link>{" "}
+        ·{" "}
+        <Link
+          href="/guides/researchers"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          Research invention preparation
         </Link>
       </p>
 

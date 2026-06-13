@@ -234,6 +234,13 @@ export default function JapanGuidePageJa() {
           className="font-medium text-blue-700 hover:text-blue-800"
         >
           ソフトウェア・AI発明の相談準備
+        </Link>{" "}
+        ·{" "}
+        <Link
+          href="/ja/guides/researchers"
+          className="font-medium text-blue-700 hover:text-blue-800"
+        >
+          研究成果の発明の相談準備
         </Link>
       </p>
 
