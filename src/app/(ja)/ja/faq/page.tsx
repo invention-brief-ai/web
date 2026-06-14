@@ -65,9 +65,13 @@ export default function FaqPageJa() {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
+      {/* Static SEO data. Escape "<" so the JSON can never break out of the
+          script element (the Next.js-recommended JSON-LD pattern). */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
       />
       <h1 className="text-2xl font-bold leading-snug tracking-tight text-slate-900 sm:text-3xl">
         よくある質問
