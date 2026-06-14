@@ -16,6 +16,8 @@ export const sitePaths = [
   "/guides/researchers",
   "/guides/software-ai",
   "/privacy",
+  "/terms",
+  "/workspace",
 ] as const;
 
 export function jaPathFor(enPath: string): string {

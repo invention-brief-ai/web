@@ -20,6 +20,7 @@ export function LanguageToggle({ locale }: { locale: "en" | "ja" }) {
   return (
     <Link
       href={target}
+      prefetch={false}
       lang={locale === "en" ? "ja" : "en"}
       className="rounded-full border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:text-slate-900"
     >

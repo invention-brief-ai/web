@@ -24,9 +24,10 @@ export default function AboutPage() {
           <p className="mt-3 leading-7 text-slate-600">
             Invention Brief AI is a consultation-preparation tool: it helps
             inventors organize their ideas before speaking with a qualified
-            patent professional. The project is currently an early-stage
-            prototype — the pages you see here are a bilingual knowledge base
-            and a preview of the planned brief builder.
+            patent professional. The project is at an early stage — the pages
+            here are a bilingual knowledge base, and the Local Workspace (a
+            free, on-device tool with no account and no AI) is available now.
+            AI-assisted guidance is planned.
           </p>
         </section>
 
@@ -48,10 +49,14 @@ export default function AboutPage() {
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 leading-7 text-slate-600">
             <li>
-              Static prototype — no accounts, payments, or content collection;
-              the only data is anonymous, cookieless visit statistics
+              No accounts, payments, or server-side content collection — your
+              workspace drafts stay on your device, and the only data the site
+              receives is anonymous, cookieless visit statistics
             </li>
-            <li>The brief builder and waitlist are not live yet</li>
+            <li>
+              The Local Workspace is available now (on-device, no AI); the
+              waitlist and any AI features are not live yet
+            </li>
             <li>
               Guides are general information pending review by qualified
               professionals

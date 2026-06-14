@@ -20,11 +20,11 @@ export default function DemoPage() {
         How a brief is built
       </h1>
       <p className="mt-4 leading-7 text-slate-600">
-        Invention Brief AI will guide you through a short series of questions
-        and organize your answers into a structured invention brief. The
-        walkthrough below shows each step using a fixed example invention — a
-        folding bicycle lock — so you can see exactly what the process looks
-        like before the tool launches.
+        In the Local Workspace, Invention Brief AI guides you through a short
+        series of questions and organizes your answers into a structured
+        invention brief. The walkthrough below shows each step using a fixed
+        example invention — a folding bicycle lock — so you can see how the
+        process works before you try it yourself.
       </p>
 
       <div className="mt-10">
@@ -53,10 +53,11 @@ export default function DemoPage() {
             Open the checklist
           </Link>
           <Link
-            href="/#waitlist"
+            href="/workspace"
+            prefetch={false}
             className="inline-block rounded-full border border-slate-300 px-6 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-white"
           >
-            Join the waitlist
+            Open the workspace
           </Link>
         </div>
       </div>

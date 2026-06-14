@@ -7,8 +7,10 @@ const content = {
     fullDisclaimer: "Read the full disclaimer →",
     copyright: "© 2026 Invention Brief AI. All rights reserved.",
     links: [
+      { href: "/workspace", label: "Local Workspace" },
       { href: "/disclaimer", label: "Disclaimer" },
       { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Use" },
       { href: "/guides/japan", label: "Japan Guide" },
       { href: "/checklist", label: "Checklist" },
       { href: "/demo", label: "Demo" },
@@ -24,8 +26,10 @@ const content = {
     fullDisclaimer: "免責事項の全文を読む →",
     copyright: "© 2026 Invention Brief AI. All rights reserved.",
     links: [
+      { href: "/ja/workspace", label: "ローカルワークスペース" },
       { href: "/ja/disclaimer", label: "免責事項" },
       { href: "/ja/privacy", label: "プライバシーポリシー" },
+      { href: "/ja/terms", label: "利用規約" },
       { href: "/ja/guides/japan", label: "日本向けガイド" },
       { href: "/ja/checklist", label: "チェックリスト" },
       { href: "/ja/demo", label: "デモ" },
@@ -50,6 +54,7 @@ export function SiteFooter({ locale }: { locale: "en" | "ja" }) {
           <p className="mt-3 text-sm leading-6 text-slate-600">{t.body}</p>
           <Link
             href={t.disclaimerHref}
+            prefetch={false}
             className="mt-3 inline-block text-sm font-medium text-blue-700 hover:text-blue-800"
           >
             {t.fullDisclaimer}
@@ -62,6 +67,7 @@ export function SiteFooter({ locale }: { locale: "en" | "ja" }) {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 lang={"lang" in link ? link.lang : undefined}
                 className="hover:text-slate-900"
               >
