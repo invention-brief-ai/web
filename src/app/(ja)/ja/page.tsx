@@ -112,7 +112,7 @@ function ProblemSection() {
 
 /* 3. AIを壁打ち相手に */
 function ThinkingPartnerSection() {
-  const plannedModes = [
+  const modes = [
     {
       name: "ミラーモード",
       description:
@@ -124,9 +124,9 @@ function ThinkingPartnerSection() {
         "整理した内容を、概要、技術要素、差別化になり得る点、公開の経緯、専門家への質問からなる相談ブリーフにまとめます。",
     },
     {
-      name: "プライベートワークスペース",
+      name: "ローカルワークスペース",
       description:
-        "自分の管理下で下書きし、MarkdownやPDFに書き出せます。自分で選んだとき以外、何も共有されません。",
+        "自分の管理下で下書きし、Markdown・JSON・印刷に書き出せます。自分で選んだとき以外、何も共有されません。",
     },
   ];
 
@@ -135,15 +135,14 @@ function ThinkingPartnerSection() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="書く前に、考える"
-          title="AIを「壁打ち相手」として使い、発明アイデアを整理する"
+          title="「壁打ち相手」として発明アイデアを整理する"
           description="いきなり出願書類を書くのではなく、まずは「何が課題なのか」「どのように解決しているのか」「既存の方法と何が違うのか」「専門家に何を確認すべきか」を整理します。"
         />
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-slate-600">
-          一般的なAIツールは文章作成に役立ちます。Invention Brief
-          AIは、特許相談前に必要となる「課題」「解決手段」「仕組み」「公開状況」「専門家に確認すべき質問」を整理する流れに特化します。
+          現在、ローカルワークスペースが提供するのは「構造」です。ガイド付きの質問、ブリーフエディタ、端末内保存、書き出しのいずれも、AIなしで動作します。任意のAIによる補助は、今後、明示的な同意のうえで追加する予定です。
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {plannedModes.map((mode) => (
+          {modes.map((mode) => (
             <div
               key={mode.name}
               className="rounded-xl border border-blue-100 bg-white p-6"
@@ -152,8 +151,8 @@ function ThinkingPartnerSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   {mode.name}
                 </h3>
-                <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
-                  構想中
+                <span className="shrink-0 rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
+                  公開中
                 </span>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -161,6 +160,18 @@ function ThinkingPartnerSection() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <p className="mx-auto max-w-2xl text-sm leading-6 text-slate-600">
+            これら3つのモードは、ローカルワークスペースで今すぐ利用できます。アカウント不要・AIなしで、すべてブラウザ内で動作する無料のツールです。AIによる補助は、今後、同意に基づく任意の機能として追加を予定しています。
+          </p>
+          <Link
+            href="/ja/workspace"
+            prefetch={false}
+            className="mt-4 inline-block rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800"
+          >
+            ローカルワークスペースを開く →
+          </Link>
         </div>
         <div className="mx-auto mt-8 max-w-3xl rounded-xl border border-blue-100 bg-white p-6">
           <h3 className="text-sm font-semibold tracking-wide text-slate-900">
@@ -174,7 +185,7 @@ function ThinkingPartnerSection() {
               機密性のある発明内容を、明示的で個別の同意なく、広告、マッチング、アクセス解析、AIモデルの学習に使うことはありません。
             </li>
             <li>
-              現在のプロトタイプが収集するのは、Cookie不使用の匿名の訪問統計のみで、入力内容は一切収集しません。現状の詳細は
+              ワークスペースの下書きはお使いの端末内にのみ保存され、アップロードされることはありません。サイトが受け取るのは、Cookie不使用の匿名の訪問統計のみです。詳細は
               <Link
                 href="/ja/privacy"
                 className="font-medium text-blue-700 hover:text-blue-800"
@@ -214,7 +225,7 @@ function WhatItDoesSection() {
     {
       title: "国別の一般情報ガイド",
       description:
-        "国別制度に関する一般情報ページへの導線を提供します。まずは日本向けガイドから公開予定です。",
+        "国別制度に関する一般情報ページへの導線を提供します。まずは日本向けガイドを公開しています。",
     },
     {
       title: "日英二言語での準備(将来)",
@@ -578,11 +589,10 @@ function WaitlistSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-blue-900 px-6 py-16 text-center sm:px-16">
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
-            β版の公開をお知らせします
+            AIによる補助の公開をお知らせします
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-blue-100">
-            Invention Brief
-            AIのβ版が利用可能になり次第、ご案内をお届けする予定です。
+            ローカルワークスペースは今すぐ無料でお使いいただけます。任意のAIによる補助機能や新しい国別ガイドの公開時期は、こちらでご案内します。
           </p>
           <form
             className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
@@ -605,7 +615,7 @@ function WaitlistSection() {
             </button>
           </form>
           <p className="mt-4 text-sm text-blue-200">
-            現在は静的なプロトタイプのため、登録機能はまだ稼働していません。入力された内容は送信・保存されません。
+            この登録フォームはプレビューで、まだ接続されていません。入力された内容は送信・保存されません。
           </p>
           <p className="mt-2 text-sm text-blue-200">
             法的助言、特許性判断、出願書類作成を提供するものではありません。

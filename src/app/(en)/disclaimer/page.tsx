@@ -106,14 +106,15 @@ export default function DisclaimerPage() {
             Confidentiality Warning
           </h2>
           <p className="mt-3 leading-7 text-slate-600">
-            Do not submit confidential invention details unless and until
-            appropriate privacy and confidentiality terms are in place. This
-            prototype has no confidentiality framework, so do not enter
-            unpublished or sensitive invention details anywhere on this site.
-            Note also that in many jurisdictions, public disclosure of an
-            invention before filing can affect your options — discuss any
-            disclosure questions with a qualified patent professional as early
-            as possible.
+            The Local Workspace keeps your drafts on your own device, so you
+            can use it for private notes. What you should not do is send
+            confidential invention details off your device through surfaces
+            that have no confidentiality framework, such as the waitlist or the
+            contact email. Using this service does not create any
+            confidentiality or attorney–client relationship. Note also that in
+            many jurisdictions, public disclosure of an invention before filing
+            can affect your options — discuss any disclosure questions with a
+            qualified patent professional as early as possible.
           </p>
         </section>
 

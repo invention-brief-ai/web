@@ -19,7 +19,7 @@ export default function DemoPageJa() {
       </h1>
       <p className="mt-4 leading-7 text-slate-600">
         Invention Brief
-        AIは、いくつかのガイド付き質問に沿って回答を整理し、構造化された「発明相談ブリーフ」にまとめるツールです。以下のデモでは、固定のサンプル発明(折りたたみ式の自転車ロック)を使って、各ステップの流れを公開前にご覧いただけます。
+        AIは、いくつかのガイド付き質問に沿って回答を整理し、構造化された「発明相談ブリーフ」にまとめるツールです。ローカルワークスペースで今すぐお使いいただけます。以下のデモでは、固定のサンプル発明(折りたたみ式の自転車ロック)を使って、各ステップの流れをご覧いただけます。
       </p>
 
       <div className="mt-10">
@@ -45,10 +45,11 @@ export default function DemoPageJa() {
             チェックリストを開く
           </Link>
           <Link
-            href="/ja#waitlist"
+            href="/ja/workspace"
+            prefetch={false}
             className="inline-block rounded-full border border-slate-300 px-6 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-white"
           >
-            β版の案内を受け取る
+            ワークスペースを開く
           </Link>
         </div>
       </div>

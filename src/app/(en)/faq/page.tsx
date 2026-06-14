@@ -5,7 +5,7 @@ import { alternatesFor } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "What Invention Brief AI is, what it is not, how it differs from asking a general AI chatbot, and how this prototype handles your information.",
+    "What Invention Brief AI is, what it is not, how it differs from asking a general AI chatbot, and how the site and the on-device Local Workspace handle your information.",
   alternates: alternatesFor("/faq", "en"),
 };
 
@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "What is Invention Brief AI?",
     answer:
-      "A privacy-first, guided invention-thinking workspace. It helps inventors clarify and structure their ideas — the problem, the mechanism, what already exists, what to ask — before speaking with a qualified patent professional, so the first consultation is focused and productive. It is currently a static prototype — the brief builder is not live yet.",
+      "A privacy-first, guided invention-thinking workspace. It helps inventors clarify and structure their ideas — the problem, the mechanism, what already exists, what to ask — before speaking with a qualified patent professional, so the first consultation is focused and productive. The Local Workspace is available now and runs entirely in your browser, with no account and no AI; optional AI-assisted guidance is planned.",
   },
   {
     question: "Is this legal advice?",
@@ -28,17 +28,17 @@ const faqs = [
   {
     question: "How is this different from asking a general AI chatbot?",
     answer:
-      "Three ways. First, structure: the output is a brief in the format patent professionals actually want to see, with country-specific preparation guidance. Second, boundaries: the tool is built to stay clearly on the preparation side of the line and never drift into legal advice or patentability claims. Third, handling of your information: this prototype collects no content you type — the only data is cookieless, aggregated visit statistics — and the planned brief builder is being designed so your idea is processed on your own device rather than sent to a server.",
+      "Three ways. First, structure: the output is a brief in the format patent professionals actually want to see, with country-specific preparation guidance. Second, boundaries: the tool is built to stay clearly on the preparation side of the line and never drift into legal advice or patentability claims. Third, handling of your information: the Local Workspace keeps your drafts on your own device — they are never uploaded — and the only data the site collects is cookieless, aggregated visit statistics.",
   },
   {
     question: "Is my idea safe on this site?",
     answer:
-      "The current prototype has no forms that send or store data — nothing you type anywhere on this site is transmitted or saved. The only data collected is anonymous, aggregated page-view statistics (cookieless, no individual tracking — see the privacy page). Even so, you should not enter confidential invention details into this or any service until appropriate privacy and confidentiality terms are in place. Keep unpublished details for the qualified professional you choose to work with.",
+      "The Local Workspace saves your drafts only on your own device (in your browser) and never uploads them; clearing your browser data deletes them, and analytics is turned off on the workspace. The only data collected anywhere is anonymous, aggregated page-view statistics (cookieless, no individual tracking — see the privacy page). Even so, do not send confidential invention details off your device through surfaces that have no confidentiality framework, such as the waitlist or contact email. Keep unpublished details for the qualified professional you choose to work with.",
   },
   {
     question: "How much does it cost?",
     answer:
-      "The site and its guides are free. The brief builder is not launched yet, and pricing has not been decided. Joining the waitlist costs nothing — and the waitlist form itself is not live yet either; this is an early-stage prototype.",
+      "The site, its guides, and the Local Workspace are free. Optional AI-assisted features are planned, and pricing for those has not been decided. Joining the waitlist costs nothing — and the waitlist form itself is not live yet either; this is an early-stage project.",
   },
   {
     question: "Do you recommend or introduce patent attorneys?",

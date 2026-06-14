@@ -9,7 +9,7 @@ const content = {
       { href: "/guides/japan", label: "Japan Guide" },
       { href: "/disclaimer", label: "Disclaimer" },
     ],
-    cta: { href: "/#waitlist", label: "Join Waitlist" },
+    cta: { href: "/workspace", label: "Open Workspace" },
     home: "/",
   },
   ja: {
@@ -19,7 +19,7 @@ const content = {
       { href: "/ja/guides/japan", label: "日本向けガイド" },
       { href: "/ja/disclaimer", label: "免責事項" },
     ],
-    cta: { href: "/ja#waitlist", label: "β版の案内" },
+    cta: { href: "/ja/workspace", label: "ワークスペース" },
     home: "/ja",
   },
 } as const;
@@ -30,7 +30,7 @@ export function SiteHeader({ locale }: { locale: "en" | "ja" }) {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur print:hidden">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href={t.home} className="flex items-center gap-2">
+        <Link href={t.home} prefetch={false} className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 text-sm font-bold text-white">
             IB
           </span>
@@ -44,6 +44,7 @@ export function SiteHeader({ locale }: { locale: "en" | "ja" }) {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className="transition-colors hover:text-slate-900"
               >
                 {link.label}
@@ -51,6 +52,7 @@ export function SiteHeader({ locale }: { locale: "en" | "ja" }) {
             ))}
             <Link
               href={t.cta.href}
+              prefetch={false}
               className="rounded-full bg-blue-700 px-4 py-2 text-white transition-colors hover:bg-blue-800"
             >
               {t.cta.label}

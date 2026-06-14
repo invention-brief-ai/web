@@ -113,7 +113,7 @@ function ProblemSection() {
 
 /* 3. AI as a structured thinking partner */
 function ThinkingPartnerSection() {
-  const plannedModes = [
+  const modes = [
     {
       name: "Mirror Mode",
       description:
@@ -125,9 +125,9 @@ function ThinkingPartnerSection() {
         "Turn that clarity into a structured consultation brief: summary, technical components, possible differentiators, disclosure history, and questions to ask.",
     },
     {
-      name: "Private Workspace",
+      name: "Local Workspace",
       description:
-        "Draft under your own control, export to Markdown or PDF, and share nothing unless you explicitly choose to share it.",
+        "Draft under your own control, export to Markdown, JSON, or print, and share nothing unless you explicitly choose to.",
     },
   ];
 
@@ -136,17 +136,16 @@ function ThinkingPartnerSection() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Think first, then draft"
-          title="Use AI as a structured thinking partner"
+          title="A structured thinking partner before you draft"
           description="Before drafting anything, Invention Brief AI helps you reflect on your idea: the problem it solves, the mechanism behind it, possible alternatives, existing approaches, and the questions you may want to ask a qualified patent professional."
         />
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-slate-600">
-          General AI tools can help you write. Invention Brief AI focuses on
-          the specific preparation workflow before a patent consultation:
-          clarifying the problem, solution, mechanism, disclosure history, and
-          questions to ask a qualified professional.
+          Today, the Local Workspace provides the structure — guided questions,
+          a brief editor, on-device storage, and export — with no AI. Optional
+          AI assistance is planned for later, only with your explicit consent.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {plannedModes.map((mode) => (
+          {modes.map((mode) => (
             <div
               key={mode.name}
               className="rounded-xl border border-blue-100 bg-white p-6"
@@ -155,8 +154,8 @@ function ThinkingPartnerSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   {mode.name}
                 </h3>
-                <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
-                  Planned
+                <span className="shrink-0 rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
+                  Available now
                 </span>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -164,6 +163,21 @@ function ThinkingPartnerSection() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <p className="mx-auto max-w-2xl text-sm leading-6 text-slate-600">
+            These three modes are available now in the Local Workspace — a free
+            tool that runs entirely in your browser, with no account and no AI.
+            Optional AI-assisted guidance is planned as a future, consent-based
+            layer.
+          </p>
+          <Link
+            href="/workspace"
+            prefetch={false}
+            className="mt-4 inline-block rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800"
+          >
+            Open the Local Workspace →
+          </Link>
         </div>
         <div className="mx-auto mt-8 max-w-3xl rounded-xl border border-blue-100 bg-white p-6">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
@@ -180,15 +194,16 @@ function ThinkingPartnerSection() {
               separate consent.
             </li>
             <li>
-              Today&apos;s prototype collects no content you type — only
-              anonymous, cookieless visit counts. See the{" "}
+              Your workspace drafts are saved only on your device and never
+              uploaded — the only data the site receives is anonymous,
+              cookieless visit counts. See the{" "}
               <Link
                 href="/privacy"
                 className="font-medium text-blue-700 hover:text-blue-800"
               >
                 privacy page
               </Link>{" "}
-              for the current status.
+              for details.
             </li>
           </ul>
         </div>
@@ -592,11 +607,11 @@ function WaitlistSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-blue-900 px-6 py-16 text-center sm:px-16">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Be first in line when we launch
+            Want to know when AI assistance arrives?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-blue-100">
-            Join the waitlist and we will let you know the moment Invention
-            Brief AI is ready for your first brief.
+            The Local Workspace is free to use right now. Join the list to hear
+            when optional AI-assisted features and new country guides are ready.
           </p>
           <form
             className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
@@ -619,7 +634,8 @@ function WaitlistSection() {
             </button>
           </form>
           <p className="mt-4 text-sm text-blue-200">
-            This is a static prototype — the waitlist is not live yet.
+            This sign-up is a preview and is not connected yet — nothing you
+            enter is submitted or stored.
           </p>
         </div>
       </div>
