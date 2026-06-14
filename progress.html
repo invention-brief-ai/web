@@ -163,7 +163,7 @@
     <span class="badge">Internal build dashboard</span>
     <h1>Invention Brief AI — Build Progress</h1>
     <p>Bilingual (EN&nbsp;/&nbsp;JA) static consultation-preparation site. Privacy-first, no backend.</p>
-    <div class="meta">Last updated: 2026-06-15 · Tier&nbsp;1 merged to main &amp; live (PR&nbsp;#1) · Not served on the live site (repo-only file)</div>
+    <div class="meta">Last updated: 2026-06-15 · Tier&nbsp;1 merged (PR&nbsp;#1) &amp; live in production (/workspace + /ja/workspace) · Dashboard merged (PR&nbsp;#2) · Repo-only file, not served</div>
   </header>
 
   <div class="summary">
@@ -177,6 +177,7 @@
   <section>
     <h2>✅ Shipped &amp; live <span class="tag">merged to main → deployed via Vercel</span></h2>
     <div class="card">
+      <div class="row"><div class="body"><div class="title">Local Workspace (Tier&nbsp;1) — on-device, no-AI</div><div class="desc">Mirror / Brief / Drafts; IndexedDB; Markdown / JSON / print export. Live in production at <code>/workspace</code> + <code>/ja/workspace</code> (HTTP&nbsp;200). 7/7 privacy gates; blocking no-egress check; Codex co-reviewed.</div></div><span class="pill done">Live</span></div>
       <div class="row"><div class="body"><div class="title">Bilingual static site (v0.2 / v0.3)</div><div class="desc">Mirrored EN ↔ JA routes, checklist, demo, FAQ, about, SEO plumbing (sitemap, robots, hreflang/canonical).</div></div><span class="pill done">Done</span></div>
       <div class="row"><div class="body"><div class="title">Privacy-first &amp; AI-mirror strategy copy</div><div class="desc">Site positioning updated to a privacy-led, AI-as-thinking-partner framing.</div></div><span class="pill done">Done</span></div>
       <div class="row"><div class="body"><div class="title">Guide: Japan self-filing (本人出願)</div><div class="desc">Decision-and-preparation guide with expert-review banner.</div></div><span class="pill done">Done</span></div>
@@ -188,7 +189,7 @@
 
   <!-- TIER 1 -->
   <section>
-    <h2>🧩 Tier 1 — Local Workspace <span class="tag">client-side only · merged to main · live</span></h2>
+    <h2>🧩 Tier 1 — Local Workspace <span class="tag">client-side only · merged to main · live in production</span></h2>
     <div class="bar"><span style="width:100%"></span></div>
     <div class="card">
       <div class="row"><div class="body"><div class="title">Mirror mode</div><div class="desc">Guided 6-step reflection (problem → mechanism → effects → known similar → uncertainties → questions). No AI.</div></div><span class="pill done">Built</span></div>
@@ -244,7 +245,7 @@
   </section>
 
   <footer class="page">
-    Standing constraints: static-only (no backend / database / payment / tracking scripts), privacy-first, and legal-safe positioning (organize &amp; structure — never legal advice, patentability judgment, or application drafting). This file lives in the repo for at-a-glance status; it carries <code>noindex</code> and is not part of the deployed site. Snapshot updated 2026-06-15, after Tier&nbsp;1 was merged to main.
+    Standing constraints: static-only (no backend / database / payment / tracking scripts), privacy-first, and legal-safe positioning (organize &amp; structure — never legal advice, patentability judgment, or application drafting). This file lives in the repo for at-a-glance status; it carries <code>noindex</code> and is not part of the deployed site. Snapshot updated 2026-06-15: Tier&nbsp;1 merged and verified live in production; this dashboard merged via PR&nbsp;#2.
   </footer>
 
 </div>
