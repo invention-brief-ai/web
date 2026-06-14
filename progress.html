@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Invention Brief AI — Build Progress</title>
+<style>
+  :root {
+    --blue: #1d4ed8;
+    --blue-dark: #1e40af;
+    --ink: #0f172a;
+    --slate: #475569;
+    --slate-light: #64748b;
+    --line: #e2e8f0;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --amber: #d97706;
+    --amber-bg: #fef3c7;
+    --gray: #64748b;
+    --gray-bg: #e2e8f0;
+    --violet: #7c3aed;
+    --violet-bg: #ede9fe;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+  header.page {
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: #fff;
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 10px 30px rgba(29, 78, 216, 0.25);
+  }
+  header.page .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  header.page h1 { margin: 14px 0 6px; font-size: 28px; line-height: 1.2; }
+  header.page p { margin: 0; color: rgba(255, 255, 255, 0.9); font-size: 15px; }
+  header.page .meta { margin-top: 16px; font-size: 13px; color: rgba(255, 255, 255, 0.8); }
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin: 22px 0 8px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .stat .n { font-size: 24px; font-weight: 700; color: var(--blue); }
+  .stat .l { font-size: 12px; color: var(--slate-light); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  section { margin-top: 34px; }
+  h2 {
+    font-size: 18px;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .tag { font-size: 12px; font-weight: 600; color: var(--slate-light); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 4px 0;
+  }
+  .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    border-top: 1px solid var(--line);
+  }
+  .row:first-child { border-top: none; }
+  .row .body { flex: 1; min-width: 0; }
+  .row .title { font-weight: 600; font-size: 15px; }
+  .row .desc { font-size: 13.5px; color: var(--slate); margin-top: 2px; }
+
+  .pill {
+    flex-shrink: 0;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    margin-top: 1px;
+  }
+  .done { color: var(--green); background: var(--green-bg); }
+  .wip { color: var(--amber); background: var(--amber-bg); }
+  .pending { color: var(--gray); background: var(--gray-bg); }
+  .gated { color: var(--violet); background: var(--violet-bg); }
+
+  .bar {
+    height: 10px;
+    border-radius: 999px;
+    background: var(--gray-bg);
+    overflow: hidden;
+    margin: 4px 0 18px;
+  }
+  .bar > span { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 11px 14px; font-size: 13.5px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { background: #f1f5f9; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--slate-light); border-top: none; }
+  td code { background: #f1f5f9; padding: 1px 6px; border-radius: 5px; font-size: 12.5px; }
+
+  .note {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 13.5px;
+    color: #78350f;
+  }
+  .note strong { color: #92400e; }
+
+  ul.next { margin: 0; padding-left: 0; list-style: none; }
+  ul.next li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; display: flex; gap: 10px; }
+  ul.next li:first-child { border-top: none; }
+  ul.next .step { flex-shrink: 0; font-weight: 700; color: var(--blue); }
+
+  footer.page {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--slate-light);
+  }
+  footer.page code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page">
+    <span class="badge">Internal build dashboard</span>
+    <h1>Invention Brief AI — Build Progress</h1>
+    <p>Bilingual (EN&nbsp;/&nbsp;JA) static consultation-preparation site. Privacy-first, no backend.</p>
+    <div class="meta">Last updated: 2026-06-15 · Branch focus: Tier&nbsp;1 Local Workspace · Not served on the live site (repo-only file)</div>
+  </header>
+
+  <div class="summary">
+    <div class="stat"><div class="n">Live</div><div class="l">Core site (on main)</div></div>
+    <div class="stat"><div class="n">Code complete</div><div class="l">Tier 1 workspace</div></div>
+    <div class="stat"><div class="n">5 / 7</div><div class="l">Privacy gates cleared</div></div>
+    <div class="stat"><div class="n">Phase 2</div><div class="l">Accounts &amp; AI — gated</div></div>
+  </div>
+
+  <!-- SHIPPED -->
+  <section>
+    <h2>✅ Shipped &amp; live <span class="tag">merged to main → deployed via Vercel</span></h2>
+    <div class="card">
+      <div class="row"><div class="body"><div class="title">Bilingual static site (v0.2 / v0.3)</div><div class="desc">Mirrored EN ↔ JA routes, checklist, demo, FAQ, about, SEO plumbing (sitemap, robots, hreflang/canonical).</div></div><span class="pill done">Done</span></div>
+      <div class="row"><div class="body"><div class="title">Privacy-first &amp; AI-mirror strategy copy</div><div class="desc">Site positioning updated to a privacy-led, AI-as-thinking-partner framing.</div></div><span class="pill done">Done</span></div>
+      <div class="row"><div class="body"><div class="title">Guide: Japan self-filing (本人出願)</div><div class="desc">Decision-and-preparation guide with expert-review banner.</div></div><span class="pill done">Done</span></div>
+      <div class="row"><div class="body"><div class="title">Guide: Software / AI inventions</div><div class="desc">Consultation-preparation guide for software & AI invention disclosures.</div></div><span class="pill done">Done</span></div>
+      <div class="row"><div class="body"><div class="title">Guide: Researcher-focused</div><div class="desc">Consultation-preparation guide aimed at academic / R&D inventors.</div></div><span class="pill done">Done</span></div>
+      <div class="row"><div class="body"><div class="title">Cookieless Vercel Web Analytics</div><div class="desc">Aggregated page-views only, fully disclosed; the one approved exception to the no-tracking rule.</div></div><span class="pill done">Done</span></div>
+    </div>
+  </section>
+
+  <!-- TIER 1 -->
+  <section>
+    <h2>🧩 Tier 1 — Local Workspace <span class="tag">client-side only · code complete · pre-commit verification pending</span></h2>
+    <div class="bar"><span style="width:80%"></span></div>
+    <div class="card">
+      <div class="row"><div class="body"><div class="title">Mirror mode</div><div class="desc">Guided 6-step reflection (problem → mechanism → effects → known similar → uncertainties → questions). No AI.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Brief mode</div><div class="desc">Structured editor with screen + clean print views; export to Markdown, JSON, and <code>window.print()</code>.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Drafts list</div><div class="desc">List / open / duplicate / delete; export-all and import (fresh-id) — fully on-device.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Persistence &amp; data layer</div><div class="desc">IndexedDB store, typed brief model, Markdown/JSON export, safe import parsing.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Bilingual UI dictionary</div><div class="desc">Full EN/JA strings, on-device honesty notice, legal-safe wording.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Routes &amp; navigation</div><div class="desc"><code>/workspace</code> + <code>/ja/workspace</code> with metadata/hreflang; header CTA + footer links wired.</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Analytics gate</div><div class="desc">Disables analytics entirely on workspace routes (no page-view beacon for on-device work).</div></div><span class="pill done">Built</span></div>
+      <div class="row"><div class="body"><div class="title">Privacy / disclaimer copy reconciliation (G1)</div><div class="desc">Update “nothing is saved / don’t enter confidential details” copy to match an on-device workspace.</div></div><span class="pill pending">Pending</span></div>
+      <div class="row"><div class="body"><div class="title">No-egress acceptance gate (G2)</div><div class="desc">Automated, blocking check that workspace source makes no network calls. Analytics-off shipped; test pending.</div></div><span class="pill wip">In&nbsp;progress</span></div>
+      <div class="row"><div class="body"><div class="title">Build · lint · commit on feature branch</div><div class="desc">Run <code>npm run build</code> + ESLint, smoke-test both routes, then commit Tier 1 for founder review.</div></div><span class="pill pending">Pending</span></div>
+    </div>
+  </section>
+
+  <!-- GATES -->
+  <section>
+    <h2>🛡️ Privacy &amp; safety gates <span class="tag">agreed before launch · 5 of 7 cleared</span></h2>
+    <table>
+      <thead><tr><th style="width:48px">Gate</th><th>Requirement</th><th style="width:120px">Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>G1</strong></td><td>Reconcile live privacy/disclaimer copy so on-device storage is described accurately.</td><td><span class="pill pending">Pending</span></td></tr>
+        <tr><td><strong>G2</strong></td><td>Prove no network egress from workspace routes (automated test) + analytics off there.</td><td><span class="pill wip">In&nbsp;progress</span></td></tr>
+        <tr><td><strong>G3</strong></td><td>IndexedDB for drafts; settings only in localStorage.</td><td><span class="pill done">Cleared</span></td></tr>
+        <tr><td><strong>G4</strong></td><td>No share links; export limited to Markdown + JSON + print.</td><td><span class="pill done">Cleared</span></td></tr>
+        <tr><td><strong>G5</strong></td><td>Sanitize / validate all imported content; no <code>dangerouslySetInnerHTML</code>.</td><td><span class="pill done">Cleared</span></td></tr>
+        <tr><td><strong>G6</strong></td><td>Name it “Local Workspace”; use “known similar approaches”, not “prior art”.</td><td><span class="pill done">Cleared</span></td></tr>
+        <tr><td><strong>G7</strong></td><td>No invention content in URLs, titles, or analytics-capturable metadata.</td><td><span class="pill done">Cleared</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- TIER 2 -->
+  <section>
+    <h2>🔭 Phase 2 — Accounts &amp; AI assistance <span class="tag">not started · founder-gated</span></h2>
+    <div class="card">
+      <div class="row"><div class="body"><div class="title">Authentication &amp; user accounts</div><div class="desc">Sign-in, user administration, per-account workspaces.</div></div><span class="pill gated">Gated</span></div>
+      <div class="row"><div class="body"><div class="title">AI assistance for the three modes</div><div class="desc">Optional AI support for Mirror / Brief, off by default with explicit consent.</div></div><span class="pill gated">Gated</span></div>
+    </div>
+    <div class="note" style="margin-top:14px">
+      <strong>Blocked pending founder decisions:</strong> Phase 2 requires a backend, which the project’s current static-only constraint forbids. Open questions before any build: (1) relax the static-only architecture? (2) legal / privacy review first; (3) backend &amp; service stack; (4) AI data-handling posture (default-off, per-action consent, retention). No Phase 2 work proceeds without sign-off.
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section>
+    <h2>➡️ Next steps</h2>
+    <ul class="next">
+      <li><span class="step">1.</span><span>Clear <strong>G1</strong> — reconcile privacy &amp; disclaimer copy (EN + JA) and update the homepage mode labels to point at the live workspace.</span></li>
+      <li><span class="step">2.</span><span>Clear <strong>G2</strong> — add the automated no-network-egress check script + npm task.</span></li>
+      <li><span class="step">3.</span><span>Run <strong>build + lint</strong>, smoke-test <code>/workspace</code> and <code>/ja/workspace</code>.</span></li>
+      <li><span class="step">4.</span><span>Commit Tier 1 on its own branch for <strong>founder review &amp; merge</strong>.</span></li>
+      <li><span class="step">5.</span><span>Present the Phase 2 decisions to the founder — do not build until signed off.</span></li>
+    </ul>
+  </section>
+
+  <footer class="page">
+    Standing constraints: static-only (no backend / database / payment / tracking scripts), privacy-first, and legal-safe positioning (organize &amp; structure — never legal advice, patentability judgment, or application drafting). This file lives in the repo for at-a-glance status; it carries <code>noindex</code> and is not part of the deployed site. Generated as a build snapshot on 2026-06-15.
+  </footer>
+
+</div>
+</body>
+</html>
