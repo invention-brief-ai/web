@@ -163,13 +163,13 @@
     <span class="badge">Internal build dashboard</span>
     <h1>Invention Brief AI — Build Progress</h1>
     <p>Bilingual (EN&nbsp;/&nbsp;JA) static consultation-preparation site. Privacy-first, no backend.</p>
-    <div class="meta">Last updated: 2026-06-15 · Branch focus: Tier&nbsp;1 Local Workspace · Not served on the live site (repo-only file)</div>
+    <div class="meta">Last updated: 2026-06-15 · Tier&nbsp;1 merged to main &amp; live (PR&nbsp;#1) · Not served on the live site (repo-only file)</div>
   </header>
 
   <div class="summary">
     <div class="stat"><div class="n">Live</div><div class="l">Core site (on main)</div></div>
-    <div class="stat"><div class="n">Code complete</div><div class="l">Tier 1 workspace</div></div>
-    <div class="stat"><div class="n">5 / 7</div><div class="l">Privacy gates cleared</div></div>
+    <div class="stat"><div class="n">Merged &amp; live</div><div class="l">Tier 1 workspace</div></div>
+    <div class="stat"><div class="n">7 / 7</div><div class="l">Privacy gates cleared</div></div>
     <div class="stat"><div class="n">Phase 2</div><div class="l">Accounts &amp; AI — gated</div></div>
   </div>
 
@@ -188,8 +188,8 @@
 
   <!-- TIER 1 -->
   <section>
-    <h2>🧩 Tier 1 — Local Workspace <span class="tag">client-side only · code complete · pre-commit verification pending</span></h2>
-    <div class="bar"><span style="width:80%"></span></div>
+    <h2>🧩 Tier 1 — Local Workspace <span class="tag">client-side only · merged to main · live</span></h2>
+    <div class="bar"><span style="width:100%"></span></div>
     <div class="card">
       <div class="row"><div class="body"><div class="title">Mirror mode</div><div class="desc">Guided 6-step reflection (problem → mechanism → effects → known similar → uncertainties → questions). No AI.</div></div><span class="pill done">Built</span></div>
       <div class="row"><div class="body"><div class="title">Brief mode</div><div class="desc">Structured editor with screen + clean print views; export to Markdown, JSON, and <code>window.print()</code>.</div></div><span class="pill done">Built</span></div>
@@ -198,20 +198,20 @@
       <div class="row"><div class="body"><div class="title">Bilingual UI dictionary</div><div class="desc">Full EN/JA strings, on-device honesty notice, legal-safe wording.</div></div><span class="pill done">Built</span></div>
       <div class="row"><div class="body"><div class="title">Routes &amp; navigation</div><div class="desc"><code>/workspace</code> + <code>/ja/workspace</code> with metadata/hreflang; header CTA + footer links wired.</div></div><span class="pill done">Built</span></div>
       <div class="row"><div class="body"><div class="title">Analytics gate</div><div class="desc">Disables analytics entirely on workspace routes (no page-view beacon for on-device work).</div></div><span class="pill done">Built</span></div>
-      <div class="row"><div class="body"><div class="title">Privacy / disclaimer copy reconciliation (G1)</div><div class="desc">Update “nothing is saved / don’t enter confidential details” copy to match an on-device workspace.</div></div><span class="pill pending">Pending</span></div>
-      <div class="row"><div class="body"><div class="title">No-egress acceptance gate (G2)</div><div class="desc">Automated, blocking check that workspace source makes no network calls. Analytics-off shipped; test pending.</div></div><span class="pill wip">In&nbsp;progress</span></div>
-      <div class="row"><div class="body"><div class="title">Build · lint · commit on feature branch</div><div class="desc">Run <code>npm run build</code> + ESLint, smoke-test both routes, then commit Tier 1 for founder review.</div></div><span class="pill pending">Pending</span></div>
+      <div class="row"><div class="body"><div class="title">Privacy copy reconciliation (G1)</div><div class="desc">Privacy, disclaimer, homepage, FAQ, about, demo + new <code>/terms</code> (EN/JA) rewritten to the accurate on-device framing; AI framed as planned, not live.</div></div><span class="pill done">Cleared</span></div>
+      <div class="row"><div class="body"><div class="title">No-egress acceptance gate (G2)</div><div class="desc">Analytics off on workspace routes; nav prefetch disabled; <code>npm run check:egress</code> is a blocking gate that fails on any network call in workspace source.</div></div><span class="pill done">Cleared</span></div>
+      <div class="row"><div class="body"><div class="title">Reviewed, built &amp; merged</div><div class="desc">Lint + egress gate + <code>next build</code> (31 static routes) all pass; Codex co-reviewed across 6 rounds; merged via PR&nbsp;#1.</div></div><span class="pill done">Done</span></div>
     </div>
   </section>
 
   <!-- GATES -->
   <section>
-    <h2>🛡️ Privacy &amp; safety gates <span class="tag">agreed before launch · 5 of 7 cleared</span></h2>
+    <h2>🛡️ Privacy &amp; safety gates <span class="tag">agreed before launch · 7 of 7 cleared</span></h2>
     <table>
       <thead><tr><th style="width:48px">Gate</th><th>Requirement</th><th style="width:120px">Status</th></tr></thead>
       <tbody>
-        <tr><td><strong>G1</strong></td><td>Reconcile live privacy/disclaimer copy so on-device storage is described accurately.</td><td><span class="pill pending">Pending</span></td></tr>
-        <tr><td><strong>G2</strong></td><td>Prove no network egress from workspace routes (automated test) + analytics off there.</td><td><span class="pill wip">In&nbsp;progress</span></td></tr>
+        <tr><td><strong>G1</strong></td><td>Reconcile live privacy/disclaimer copy so on-device storage is described accurately.</td><td><span class="pill done">Cleared</span></td></tr>
+        <tr><td><strong>G2</strong></td><td>Prove no network egress from workspace routes (automated blocking test) + analytics off there.</td><td><span class="pill done">Cleared</span></td></tr>
         <tr><td><strong>G3</strong></td><td>IndexedDB for drafts; settings only in localStorage.</td><td><span class="pill done">Cleared</span></td></tr>
         <tr><td><strong>G4</strong></td><td>No share links; export limited to Markdown + JSON + print.</td><td><span class="pill done">Cleared</span></td></tr>
         <tr><td><strong>G5</strong></td><td>Sanitize / validate all imported content; no <code>dangerouslySetInnerHTML</code>.</td><td><span class="pill done">Cleared</span></td></tr>
@@ -237,16 +237,14 @@
   <section>
     <h2>➡️ Next steps</h2>
     <ul class="next">
-      <li><span class="step">1.</span><span>Clear <strong>G1</strong> — reconcile privacy &amp; disclaimer copy (EN + JA) and update the homepage mode labels to point at the live workspace.</span></li>
-      <li><span class="step">2.</span><span>Clear <strong>G2</strong> — add the automated no-network-egress check script + npm task.</span></li>
-      <li><span class="step">3.</span><span>Run <strong>build + lint</strong>, smoke-test <code>/workspace</code> and <code>/ja/workspace</code>.</span></li>
-      <li><span class="step">4.</span><span>Commit Tier 1 on its own branch for <strong>founder review &amp; merge</strong>.</span></li>
-      <li><span class="step">5.</span><span>Present the Phase 2 decisions to the founder — do not build until signed off.</span></li>
+      <li><span class="step">✓</span><span><strong>Tier 1 Local Workspace is merged to <code>main</code> and live</strong> — <code>/workspace</code> and <code>/ja/workspace</code>, all seven privacy gates cleared.</span></li>
+      <li><span class="step">1.</span><span>Decide on <strong>Phase 2</strong> (accounts + AI) — the four founder decisions below — before any backend work.</span></li>
+      <li><span class="step">2.</span><span>Watch / iterate on the live workspace; keep <code>npm run verify</code> (lint + no-egress) green on future changes.</span></li>
     </ul>
   </section>
 
   <footer class="page">
-    Standing constraints: static-only (no backend / database / payment / tracking scripts), privacy-first, and legal-safe positioning (organize &amp; structure — never legal advice, patentability judgment, or application drafting). This file lives in the repo for at-a-glance status; it carries <code>noindex</code> and is not part of the deployed site. Generated as a build snapshot on 2026-06-15.
+    Standing constraints: static-only (no backend / database / payment / tracking scripts), privacy-first, and legal-safe positioning (organize &amp; structure — never legal advice, patentability judgment, or application drafting). This file lives in the repo for at-a-glance status; it carries <code>noindex</code> and is not part of the deployed site. Snapshot updated 2026-06-15, after Tier&nbsp;1 was merged to main.
   </footer>
 
 </div>
